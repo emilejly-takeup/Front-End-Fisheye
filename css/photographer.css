@@ -1,29 +1,108 @@
 #contact_modal {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .photograph-header {
-    background-color: #FAFAFA;
-    height: 300px;
-    margin: 0 100px;
+    background-color: #fafafa;
+    padding: 60px 50px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+.photographer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.photographer-info h1 {
+    color: #d3573c;
+    font-size: 48px;
+    margin: 0;
+}
+
+.location {
+    color: #901c1c;
+    font-size: 24px;
+    margin: 0;
+}
+
+.tagline {
+    color: #525252;
+    font-size: 18px;
+    margin: 0;
+}
+
+.photographer-portrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    order: 3;
 }
 
 .contact_button {
-    font-size: 20px;
-    font-weight: bold;
+    background-color: #901c1c;
     color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
     border: none;
-    background-color: #901C1C;
     border-radius: 5px;
+    padding: 20px 15px;
     cursor: pointer;
+    font-size: 20px;
+    order: 2;
+}
+
+.sort-container {
+    margin: 20px 100px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sort-container label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.photographer-stats {
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    background-color: #db8876;
+    padding: 20px 30px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    gap: 60px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.total-likes,
+.daily-rate {
+    margin: 0;
+}
+
+.media-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 100px;
 }
 
 .modal {
     border-radius: 5px;
-    background-color: #DB8876;
+    background-color: #db8876;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -56,7 +135,7 @@ form {
 }
 
 form label {
-    color: #312E2E;
+    color: #312e2e;
     font-size: 36px;
 }
 
@@ -64,7 +143,7 @@ form div {
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: self-start;
+    align-items: flex-start;
     margin-bottom: 26px;
 }
 
@@ -73,4 +152,70 @@ form input {
     height: 68px;
     border: none;
     border-radius: 5px;
+}
+
+.media-card {
+    margin-bottom: 20px;
+}
+
+.media-container {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.media-container img,
+.media-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.media-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #901c1c;
+}
+
+.media-info h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.likes-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #901c1c;
+    font-size: 24px;
+}
+
+.likes-count {
+    font-weight: 500;
+}
+
+.likes-button {
+    background: none;
+    border: none;
+    color: #901c1c;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.heart-icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s ease;
+}
+
+.likes-button:hover {
+    color: #d3573c;
+}
+
+.likes-button.active .heart-icon {
+    fill: currentColor;
 }
